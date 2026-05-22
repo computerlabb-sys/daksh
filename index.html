@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth bg-neutral-50 text-neutral-900">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elio — Design Wizard & Digital Architect</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      /* Smooth reveal styling */
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* Custom selection highlight */
+      ::selection {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased text-neutral-800 selection:bg-neutral-900 selection:text-neutral-50">
+
+    <!-- Global Layout Wrapper -->
+    <div class="relative min-h-screen flex flex-col justify-between">
+      
+      <!-- 1. Header Navigation -->
+      <header class="sticky top-0 z-40 w-full bg-neutral-50/80 backdrop-blur-md border-b border-neutral-100">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 py-5 flex items-center justify-between">
+          <!-- Left Logo & Nav Links -->
+          <div class="flex items-center space-x-12">
+            <!-- Geometric Logo Emblem -->
+            <a href="#hero" class="group flex items-center space-x-2" aria-label="Elio Portfolio Home">
+              <svg class="w-8 h-8 text-neutral-900 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 15L85 75H15L50 15Z" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+                <circle cx="50" cy="50" r="10" fill="currentColor"/>
+              </svg>
+              <span class="font-display font-bold tracking-tight text-neutral-900 text-lg">ELIO</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8" aria-label="Main Navigation">
+              <a href="#about" class="font-mono text-xs uppercase tracking-wider text-neutral-500 hover:text-neutral-950 transition-colors">About Me</a>
+              <a href="#toolbox" class="font-mono text-xs uppercase tracking-wider text-neutral-500 hover:text-neutral-950 transition-colors">Toolbox</a>
+              <a href="#services" class="font-mono text-xs uppercase tracking-wider text-neutral-500 hover:text-neutral-950 transition-colors">Services</a>
+              <a href="#blog" class="font-mono text-xs uppercase tracking-wider text-neutral-500 hover:text-neutral-950 transition-colors">Blog</a>
+            </nav>
+          </div>
+
+          <!-- Right Action Call -->
+          <div>
+            <a href="#contact" class="group flex items-center space-x-1 font-mono text-xs uppercase tracking-widest text-neutral-900 hover:text-neutral-600 transition-colors font-medium">
+              <span>Book A Call</span>
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content Container Grid -->
+      <main class="w-full flex-grow">
+
+        <!-- 2. Hero Section (REPLICATES ATTACHED MOCKUP) -->
+        <section id="hero" class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-12 md:py-24 relative overflow-hidden flex flex-col justify-center min-h-[85vh]">
+          
+          <!-- Screen Margin Sidebar Indicator Decorations (Anti-AI-Slop, Pure Style) -->
+          <div class="absolute left-6 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center space-y-4">
+            <span class="h-16 w-[1px] bg-neutral-200"></span>
+            <span class="font-mono text-[9px] vertical-text text-neutral-400 select-none tracking-widest">PORTFOLIO EDITION '26</span>
+            <span class="h-16 w-[1px] bg-neutral-200"></span>
+          </div>
+
+          <!-- Hero Main Split Layout -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Grid Content (Spans 6 cols on big screen) -->
+            <div class="lg:col-span-6 flex flex-col justify-center space-y-10 md:space-y-16">
+              
+              <!-- Mockup Stat Boxes (Upper-Left side-by-side stats) -->
+              <div class="flex items-center space-x-12 reveal-on-scroll visible">
+                <!-- Stat Item 1 -->
+                <div class="space-y-1">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-neutral-900 font-mono text-xs">•</span>
+                    <span class="font-display font-light text-3xl sm:text-4xl tracking-tight text-neutral-950 counter-val" data-target="200">+200</span>
+                  </div>
+                  <p class="font-mono text-[10px] uppercase tracking-wider text-neutral-500 pl-4">Projects Completed</p>
+                </div>
+                
+                <!-- Stat Item 2 -->
+                <div class="space-y-1">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-neutral-900 font-mono text-xs">•</span>
+                    <span class="font-display font-light text-3xl sm:text-4xl tracking-tight text-neutral-950 counter-val" data-target="50">+50</span>
+                  </div>
+                  <p class="font-mono text-[10px] uppercase tracking-wider text-neutral-500 pl-4">Happy Clients</p>
+                </div>
+              </div>
+
+              <!-- Huge Headline "Hello" and name subheadline -->
+              <div class="space-y-4">
+                <h1 class="font-display font-bold text-8xl sm:text-9xl md:text-[11rem] tracking-tighter text-neutral-950 leading-none select-none">
+                  Hello
+                </h1>
+                <p class="font-display font-medium text-lg sm:text-xl md:text-2xl text-neutral-700 tracking-tight pl-2">
+                  — It's <span class="text-neutral-950 font-bold underline decoration-1 underline-offset-4">Elio</span>, a design wizard!
+                </p>
+              </div>
+
+              <!-- Bottom left actions & scroll Indicator -->
+              <div class="flex items-center justify-between sm:justify-start sm:space-x-12 pt-4 border-t border-neutral-100 max-w-md">
+                <a href="#contact" class="group flex items-center space-x-2 font-mono text-xs uppercase tracking-wider text-neutral-900 font-semibold hover:text-neutral-600">
+                  <span>Book Email</span>
+                  <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </a>
+                <a href="#about" class="flex items-center space-x-2 font-mono text-xs uppercase tracking-wider text-neutral-400 hover:text-neutral-900 transition-colors space-x-1">
+                  <span>Scroll Down</span>
+                  <span class="inline-block animate-bounce">↓</span>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Right Grid Portrait (Spans 6 cols) -->
+            <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
+              <!-- Portrait Image Canvas -->
+              <div class="relative max-w-md md:max-w-lg lg:max-w-full w-full aspect-[4/5] bg-neutral-100 rounded-3xl overflow-hidden group shadow-xl transition-transform duration-500 hover:scale-[1.01]">
+                
+                <!-- Background visual frame -->
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-50/100 via-neutral-50/30 to-transparent z-10 opacity-70"></div>
+                
+                <!-- High Resolution Grayscale Portrait -->
+                <img 
+                  src="./src/assets/images/designer_portrait_1779425609556.png" 
+                  alt="Elio — Grayscale Minimalist Portrait" 
+                  class="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105" 
+                  referrerpolicy="no-referrer"
+                />
+
+                <!-- Design Emblem overlay -->
+                <div class="absolute bottom-6 right-6 z-20 bg-neutral-950/90 backdrop-blur-md px-4 py-3 rounded-xl border border-neutral-800 flex items-center space-x-3">
+                  <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                  </span>
+                  <span class="font-mono text-[10px] uppercase text-white tracking-widest leading-none">Status: Available for Q3</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 3. About Section -->
+        <section id="about" class="w-full bg-neutral-900 text-neutral-100 py-24 border-t border-neutral-800">
+          <div class="max-w-7xl mx-auto px-6 sm:px-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+              <!-- Section Label -->
+              <div class="lg:col-span-4 space-y-4 sticky top-28">
+                <span class="font-mono text-xs uppercase text-neutral-500 tracking-widest">• 01 / BACKGROUND</span>
+                <h2 class="font-display font-medium text-4xl sm:text-5xl text-white tracking-tight leading-none">About Me</h2>
+                <p class="text-neutral-400 font-mono text-xs">A Decade of Crafting Fine-Art Interactive Canvas Interfaces.</p>
+              </div>
+
+              <!-- Main Copy -->
+              <div class="lg:col-span-8 space-y-12">
+                <p class="font-display font-light text-2xl sm:text-3xl text-neutral-300 leading-relaxed max-w-3xl">
+                  "I define myself by contrast. In a crowded digital space of unnecessary widgets and transient trends, my layouts focus strictly on pure proportions, pristine negative spaces, and editorial hierarchies."
+                </p>
+
+                <div class="h-[1px] bg-neutral-800"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <!-- Pillar 1 -->
+                  <div class="space-y-3">
+                    <span class="font-mono text-xs text-neutral-500">PHILOSOPHY</span>
+                    <h3 class="font-display font-semibold text-xl text-white">Primacy of Typography</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed font-light">
+                      Typography is not just a carrier of text; it is the physical architecture of structure. By choosing carefully calibrated scale and weights, the need for decorative assets vanishes.
+                    </p>
+                  </div>
+                  <!-- Pillar 2 -->
+                  <div class="space-y-3">
+                    <span class="font-mono text-xs text-neutral-500">STANDARDS</span>
+                    <h3 class="font-display font-semibold text-xl text-white">Full Responsive Integrity</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed font-light">
+                      A website must look as tailored on a compact watch screen as it does on a massive luxury display. Absolute consistency is secured via pure modular styling frameworks.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Custom visual statistics / Awards -->
+                <div class="bg-neutral-950 p-8 rounded-2xl border border-neutral-800 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+                  <div class="space-y-1">
+                    <h4 class="font-display font-bold text-3xl text-white">100%</h4>
+                    <p class="font-mono text-[9px] text-neutral-400 uppercase tracking-widest">Handcrafted Code</p>
+                  </div>
+                  <div class="space-y-1">
+                    <h4 class="font-display font-bold text-3xl text-white">8+ Yrs</h4>
+                    <p class="font-mono text-[9px] text-neutral-400 uppercase tracking-widest">Global Experience</p>
+                  </div>
+                  <div class="space-y-1">
+                    <h4 class="font-display font-bold text-3xl text-white">Awwwards</h4>
+                    <p class="font-mono text-[9px] text-neutral-400 uppercase tracking-widest">Honors & Mentions</p>
+                  </div>
+                  <div class="space-y-1">
+                    <h4 class="font-display font-bold text-3xl text-white">Top Rated</h4>
+                    <p class="font-mono text-[9px] text-neutral-400 uppercase tracking-widest">Webflow Expert</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 4. Toolbox Section (Bento Grid with Category Tabs) -->
+        <section id="toolbox" class="w-full py-24 border-b border-neutral-200">
+          <div class="max-w-7xl mx-auto px-6 sm:px-12">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+              <div class="space-y-4">
+                <span class="font-mono text-xs uppercase text-neutral-500 tracking-widest">• 02 / EXPERTISE</span>
+                <h2 class="font-display font-semibold text-4xl sm:text-5xl text-neutral-950 tracking-tight leading-none">The Toolbox</h2>
+              </div>
+              
+              <!-- Filter Tabs -->
+              <div class="flex flex-wrap gap-2" role="group" aria-label="Toolbox Categories">
+                <button class="toolbox-filter-btn px-4 py-2 text-xs font-mono uppercase bg-neutral-900 text-white rounded-lg transition-all cursor-pointer font-medium active" data-category="all">
+                  Show All
+                </button>
+                <button class="toolbox-filter-btn px-4 py-2 text-xs font-mono uppercase bg-neutral-100 text-neutral-700 hover:bg-neutral-200 rounded-lg transition-all cursor-pointer" data-category="design">
+                  Design
+                </button>
+                <button class="toolbox-filter-btn px-4 py-2 text-xs font-mono uppercase bg-neutral-100 text-neutral-700 hover:bg-neutral-200 rounded-lg transition-all cursor-pointer" data-category="dev">
+                  Development
+                </button>
+                <button class="toolbox-filter-btn px-4 py-2 text-xs font-mono uppercase bg-neutral-100 text-neutral-700 hover:bg-neutral-200 rounded-lg transition-all cursor-pointer" data-category="motion">
+                  Motion & 3D
+                </button>
+              </div>
+            </div>
+
+            <!-- Bento Grid of Tools -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+              <!-- Card 1: Figma -->
+              <div class="toolbox-card bg-white p-8 rounded-2xl border border-neutral-200 group hover:border-black transition-all duration-300" data-category="design">
+                <div class="flex items-center justify-between mb-8">
+                  <div class="p-3 bg-neutral-50 rounded-xl border border-neutral-200">
+                    <svg class="w-6 h-6 text-neutral-950" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M12 2A4 4 0 008 6v4a4 4 0 004 4 4 4 0 004-4V6a4 4 0 00-4-4zM12 10a4 4 0 100 8h4v-4a4 4 0 00-4-4z" />
+                      <circle cx="8" cy="18" r="2" />
+                    </svg>
+                  </div>
+                  <span class="font-mono text-[9px] uppercase tracking-widest text-neutral-400 leading-none">98% EXPERT</span>
+                </div>
+                <h3 class="font-display font-semibold text-lg text-neutral-900 mb-2">Figma Interface Design</h3>
+                <p class="text-sm text-neutral-500 leading-relaxed font-light mb-4">Atomic design libraries, luxury design assets, wireframes, and production-ready visual systems.</p>
+                <div class="w-full bg-neutral-100 h-1 rounded-full overflow-hidden">
+                  <div class="bg-neutral-900 h-full w-[98%] rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Card 2: Webflow -->
+              <div class="toolbox-card bg-white p-8 rounded-2xl border border-neutral-200 group hover:border-black transition-all duration-300" data-category="dev">
+                <div class="flex items-center justify-between mb-8">
+                  <div class="p-3 bg-neutral-50 rounded-xl border border-neutral-200">
+                    <svg class="w-6 h-6 text-neutral-950" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                      <polyline points="2 17 12 22 22 17" />
+                      <polyline points="2 12 12 17 22 12" />
+                    </svg>
+                  </div>
+                  <span class="font-mono text-[9px] uppercase tracking-widest text-neutral-400 leading-none">95% EXPERT</span>
+                </div>
+                <h3 class="font-display font-semibold text-lg text-neutral-900 mb-2">Webflow Engine Build</h3>
+                <p class="text-sm text-neutral-500 leading-relaxed font-light mb-4">Semantic structures, complex interactions and hover features, custom API bindings, and clean layouts.</p>
+                <div class="w-full bg-neutral-100 h-1 rounded-full overflow-hidden">
+                  <div class="bg-neutral-900 h-full w-[95%] rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Card 3: Tailwind CSS -->
+              <div class="toolbox-card bg-white p-8 rounded-2xl border border-neutral-200 group hover:border-black transition-all duration-300" data-category="dev">
+                <div class="flex items-center justify-between mb-8">
+                  <div class="p-3 bg-neutral-50 rounded-xl border border-neutral-200">
+                    <svg class="w-6 h-6 text-neutral-950" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" stroke-linejoin="round"/>
+                      <path d="M2 17l10 5 10-5" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <span class="font-mono text-[9px] uppercase tracking-widest text-neutral-400 leading-none">95% ADVANCED</span>
+                </div>
+                <h3 class="font-display font-semibold text-lg text-neutral-900 mb-2">Tailwind Architecting</h3>
+                <p class="text-sm text-neutral-500 leading-relaxed font-light mb-4">Bespoke fluid typography formulas, high-performance responsive utilities, and clean semantic color systems.</p>
+                <div class="w-full bg-neutral-100 h-1 rounded-full overflow-hidden">
+                  <div class="bg-neutral-900 h-full w-[95%] rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Card 4: Javascript / Typescript -->
+              <div class="toolbox-card bg-white p-8 rounded-2xl border border-neutral-200 group hover:border-black transition-all duration-300" data-category="dev">
+                <div class="flex items-center justify-between mb-8">
+                  <div class="p-3 bg-neutral-50 rounded-xl border border-neutral-200">
+                    <svg class="w-6 h-6 text-neutral-950" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <rect x="2" y="2" width="20" height="20" rx="5" />
+                      <path d="M10 17H8v-8M16 11l-3 3 3 3" />
+                    </svg>
+                  </div>
+                  <span class="font-mono text-[9px] uppercase tracking-widest text-neutral-400 leading-none">90% ADVANCED</span>
+                </div>
+                <h3 class="font-display font-semibold text-lg text-neutral-900 mb-2">TypeScript Engineering</h3>
+                <p class="text-sm text-neutral-500 leading-relaxed font-light mb-4">Clean state systems, DOM orchestrations, mathematical custom calculations, and fast load runtimes.</p>
+                <div class="w-full bg-neutral-100 h-1 rounded-full overflow-hidden">
+                  <div class="bg-neutral-900 h-full w-[90%] rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Card 5: Motion Design -->
+              <div class="toolbox-card bg-white p-8 rounded-2xl border border-neutral-200 group hover:border-black transition-all duration-300" data-category="motion">
+                <div class="flex items-center justify-between mb-8">
+                  <div class="p-3 bg-neutral-50 rounded-xl border border-neutral-200">
+                    <svg class="w-6 h-6 text-neutral-950" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                  </div>
+                  <span class="font-mono text-[9px] uppercase tracking-widest text-neutral-400 leading-none">85% SKILLED</span>
+                </div>
+                <h3 class="font-display font-semibold text-lg text-neutral-900 mb-2">Creative Motion & Curving</h3>
+                <p class="text-sm text-neutral-500 leading-relaxed font-light mb-4">Lottie, custom CSS keyframes, and cubic-bezier interpolation curves for highly natural interface feed.</p>
+                <div class="w-full bg-neutral-100 h-1 rounded-full overflow-hidden">
+                  <div class="bg-neutral-900 h-full w-[85%] rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Card 6: 3D Blender -->
+              <div class="toolbox-card bg-white p-8 rounded-2xl border border-neutral-200 group hover:border-black transition-all duration-300" data-category="motion">
+                <div class="flex items-center justify-between mb-8">
+                  <div class="p-3 bg-neutral-50 rounded-xl border border-neutral-200">
+                    <svg class="w-6 h-6 text-neutral-950" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <rect x="3" y="3" width="18" height="18" rx="2" stroke-linejoin="round" />
+                      <circle cx="12" cy="12" r="5" />
+                    </svg>
+                  </div>
+                  <span class="font-mono text-[9px] uppercase tracking-widest text-neutral-400 leading-none">80% PROFICIENT</span>
+                </div>
+                <h3 class="font-display font-semibold text-lg text-neutral-900 mb-2">Studio 3D Asset Modeling</h3>
+                <p class="text-sm text-neutral-500 leading-relaxed font-light mb-4">Procedural lighting surfaces, minimalist clay models, and optimization formulas for instant page loading.</p>
+                <div class="w-full bg-neutral-100 h-1 rounded-full overflow-hidden">
+                  <div class="bg-neutral-900 h-full w-[80%] rounded-full"></div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 5. Services & Costume Calculator Section -->
+        <section id="services" class="w-full py-24 bg-neutral-50 border-b border-neutral-200">
+          <div class="max-w-7xl mx-auto px-6 sm:px-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+              
+              <!-- Left side description -->
+              <div class="lg:col-span-5 space-y-6 sticky top-28">
+                <span class="font-mono text-xs uppercase text-neutral-500 tracking-widest">• 03 /bespoke packages</span>
+                <h2 class="font-display font-semibold text-4xl sm:text-5xl text-neutral-950 tracking-tight leading-none">My Services</h2>
+                <p class="text-neutral-600 font-light leading-relaxed text-sm">
+                  Below you can select different components to build custom development or design packages, and instantly see a fair transparent cost estimate. Transparent pricing ensures no friction.
+                </p>
+
+                <!-- Interactive Cost Calculator Total Panel -->
+                <div class="bg-neutral-900 text-white p-8 rounded-2xl border border-neutral-800 space-y-6 shadow-xl">
+                  <div>
+                    <span class="font-mono text-[9px] uppercase text-neutral-400 tracking-widest leading-none">ESTIMATED TOTAL BUDGET</span>
+                    <div id="calc-total" class="font-display font-bold text-4xl sm:text-5xl text-white tracking-tight mt-1">$0</div>
+                  </div>
+
+                  <div class="text-xs text-neutral-400 flex justify-between border-t border-neutral-800 pt-4">
+                    <span>TIMELINE ESTIMATE:</span>
+                    <span id="calc-duration" class="font-mono font-medium text-white">0 weeks</span>
+                  </div>
+
+                  <a href="#contact" class="block w-full text-center bg-white text-neutral-900 hover:bg-neutral-100 py-3 rounded-lg font-mono text-xs font-semibold uppercase tracking-wider transition-colors">
+                    Request This Package →
+                  </a>
+                  
+                  <p class="font-mono text-[9px] text-neutral-500 text-center uppercase">3+ services selected automatically saves 10% bundle margin!</p>
+                </div>
+              </div>
+
+              <!-- Right side selection parameters -->
+              <div class="lg:col-span-7 space-y-6">
+                
+                <!-- Service Parameter Card 1 -->
+                <label class="flex items-start justify-between p-6 bg-white border border-neutral-200 rounded-2xl cursor-pointer hover:border-black transition-all select-none gap-4">
+                  <div class="flex items-start space-x-4">
+                    <input type="checkbox" class="calc-option w-5 h-5 rounded border-neutral-300 text-neutral-900 focus:ring-neutral-900 mt-1" data-price="2500" data-time="2" checked />
+                    <div class="space-y-1">
+                      <h3 class="font-display font-semibold text-lg text-neutral-900 leading-none">Strategic Brand Identity</h3>
+                      <p class="text-xs text-neutral-500 font-light max-w-lg">Competitor landscapes, font alignments, typographic custom guidelines, vector design files, and complete brand bible assets.</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-display font-semibold text-base text-neutral-900">$2,500</span>
+                    <span class="block font-mono text-[9px] text-neutral-400">2 WEEKS</span>
+                  </div>
+                </label>
+
+                <!-- Service Parameter Card 2 -->
+                <label class="flex items-start justify-between p-6 bg-white border border-neutral-200 rounded-2xl cursor-pointer hover:border-black transition-all select-none gap-4">
+                  <div class="flex items-start space-x-4">
+                    <input type="checkbox" class="calc-option w-5 h-5 rounded border-neutral-300 text-neutral-900 focus:ring-neutral-900 mt-1" data-price="4500" data-time="3" checked />
+                    <div class="space-y-1">
+                      <h3 class="font-display font-semibold text-lg text-neutral-900 leading-none">UI & UX Product Design</h3>
+                      <p class="text-xs text-neutral-500 font-light max-w-lg">High-fidelity screens, clickable Figma system prototypes, asset preparation, vector user flows, and structured design kits.</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-display font-semibold text-base text-neutral-900">$4,500</span>
+                    <span class="block font-mono text-[9px] text-neutral-400">3 WEEKS</span>
+                  </div>
+                </label>
+
+                <!-- Service Parameter Card 3 -->
+                <label class="flex items-start justify-between p-6 bg-white border border-neutral-200 rounded-2xl cursor-pointer hover:border-black transition-all select-none gap-4">
+                  <div class="flex items-start space-x-4">
+                    <input type="checkbox" class="calc-option w-5 h-5 rounded border-neutral-300 text-neutral-900 focus:ring-neutral-900 mt-1" data-price="5000" data-time="3" />
+                    <div class="space-y-1">
+                      <h3 class="font-display font-semibold text-lg text-neutral-900 leading-none">Webflow Pixel-Perfect Development</h3>
+                      <p class="text-xs text-neutral-500 font-light max-w-lg">Translating designs into responsive Webflow containers with high-speed indexing, search configurations, and smooth motion settings.</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-display font-semibold text-base text-neutral-900">$5,000</span>
+                    <span class="block font-mono text-[9px] text-neutral-400">3 WEEKS</span>
+                  </div>
+                </label>
+
+                <!-- Service Parameter Card 4 -->
+                <label class="flex items-start justify-between p-6 bg-white border border-neutral-200 rounded-2xl cursor-pointer hover:border-black transition-all select-none gap-4">
+                  <div class="flex items-start space-x-4">
+                    <input type="checkbox" class="calc-option w-5 h-5 rounded border-neutral-300 text-neutral-900 focus:ring-neutral-900 mt-1" data-price="1500" data-time="1" />
+                    <div class="space-y-1">
+                      <h3 class="font-display font-semibold text-lg text-neutral-900 leading-none">SEO & Custom High-Converting Copy</h3>
+                      <p class="text-xs text-neutral-500 font-light max-w-lg">SEO structure setups, crisp typographic key lines, schema configurations, performance tuning, and page speed index validation.</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-display font-semibold text-base text-neutral-900">$1,500</span>
+                    <span class="block font-mono text-[9px] text-neutral-400">1 WEEK</span>
+                  </div>
+                </label>
+
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 6. Blog Section -->
+        <section id="blog" class="w-full py-24 bg-white border-b border-neutral-200">
+          <div class="max-w-7xl mx-auto px-6 sm:px-12">
+            
+            <!-- Section Header -->
+            <div class="space-y-4 mb-16">
+              <span class="font-mono text-xs uppercase text-neutral-500 tracking-widest">• 04 / WRITINGS</span>
+              <h2 class="font-display font-semibold text-4xl sm:text-5xl text-neutral-950 tracking-tight leading-none">Featured Editorial</h2>
+            </div>
+
+            <!-- Blog Articles Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              
+              <!-- Blog Item 1 -->
+              <article class="blog-article-card group cursor-pointer space-y-4 p-6 hover:bg-neutral-50 rounded-2xl border border-transparent transition-all" data-id="1">
+                <span class="font-mono text-xs text-neutral-400">MAY 15, 2026 // READ TIME: 3 MIN</span>
+                <div class="space-y-2">
+                  <h3 class="font-display font-semibold text-xl text-neutral-900 group-hover:underline decoration-1 underline-offset-4 leading-snug">The Anti-Trends of Web Design</h3>
+                  <p class="text-xs text-neutral-500 font-light leading-relaxed">Why monochromatic stark palettes and aggressive negative spacing are reclaiming digital luxury authority.</p>
+                </div>
+                <div class="flex items-center space-x-1 font-mono text-xs uppercase tracking-wider text-neutral-950 font-semibold group-hover:text-neutral-500">
+                  <span>Read Article</span>
+                  <span>→</span>
+                </div>
+              </article>
+
+              <!-- Blog Item 2 -->
+              <article class="blog-article-card group cursor-pointer space-y-4 p-6 hover:bg-neutral-50 rounded-2xl border border-transparent transition-all" data-id="2">
+                <span class="font-mono text-xs text-neutral-400">APRIL 28, 2026 // READ TIME: 4 MIN</span>
+                <div class="space-y-2">
+                  <h3 class="font-display font-semibold text-xl text-neutral-900 group-hover:underline decoration-1 underline-offset-4 leading-snug">Slaying with Contrast: Monochromatic Palettes</h3>
+                  <p class="text-xs text-neutral-500 font-light leading-relaxed">How to craft high-impact web design systems using strictly whites, dark blacks, and charcoal values.</p>
+                </div>
+                <div class="flex items-center space-x-1 font-mono text-xs uppercase tracking-wider text-neutral-950 font-semibold group-hover:text-neutral-500">
+                  <span>Read Article</span>
+                  <span>→</span>
+                </div>
+              </article>
+
+              <!-- Blog Item 3 -->
+              <article class="blog-article-card group cursor-pointer space-y-4 p-6 hover:bg-neutral-50 rounded-2xl border border-transparent transition-all" data-id="3">
+                <span class="font-mono text-xs text-neutral-400">MARCH 12, 2026 // READ TIME: 6 MIN</span>
+                <div class="space-y-2">
+                  <h3 class="font-display font-semibold text-xl text-neutral-900 group-hover:underline decoration-1 underline-offset-4 leading-snug">My Webflow Workflow: 200+ Projects Later</h3>
+                  <p class="text-xs text-neutral-500 font-light leading-relaxed">System-standard checklists, responsive bounding tricks, and layout sizing for scaling websites smoothly.</p>
+                </div>
+                <div class="flex items-center space-x-1 font-mono text-xs uppercase tracking-wider text-neutral-950 font-semibold group-hover:text-neutral-500">
+                  <span>Read Article</span>
+                  <span>→</span>
+                </div>
+              </article>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 7. Dynamic Form & Booking Page -->
+        <section id="contact" class="w-full py-24 bg-neutral-950 text-white relative">
+          <div class="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-5 space-y-6">
+              <span class="font-mono text-xs uppercase text-neutral-400 tracking-widest">• 05 / GET IN TOUCH</span>
+              <h2 class="font-display font-bold text-5xl sm:text-6xl text-white tracking-tight leading-none">Let’s craft magic.</h2>
+              <p class="text-neutral-400 font-light leading-relaxed text-sm">
+                Have a project concept or need custom design guidelines? Submit this request. Let's build stable digital systems together. Response speed is typically within 24 hours.
+              </p>
+
+              <div class="space-y-4 border-t border-neutral-800 pt-6">
+                <!-- Location details -->
+                <div class="flex items-center space-x-3 text-xs text-neutral-300">
+                  <svg class="h-4 w-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                  <span id="utc-time" class="font-mono">2026-05-22 04:52:51 UTC</span>
+                </div>
+                <!-- Location -->
+                <div class="flex items-center space-x-3 text-xs text-neutral-300">
+                  <svg class="h-4 w-4 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                    <circle cx="12" cy="9" r="2"/>
+                  </svg>
+                  <span>Metropolis Studio — Earth GMT+0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Booking Interactive Form -->
+            <div class="lg:col-span-7 bg-neutral-900 border border-neutral-800 p-8 rounded-3xl">
+              <form id="contact-form" class="space-y-6" novalidate>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <!-- Name -->
+                  <div class="space-y-2">
+                    <label class="font-mono text-[10px] uppercase text-neutral-400 tracking-wider">Your Name *</label>
+                    <input type="text" name="name" required placeholder="e.g., Ada Lovelace" class="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-white transition-colors" />
+                  </div>
+                  <!-- Email -->
+                  <div class="space-y-2">
+                    <label class="font-mono text-[10px] uppercase text-neutral-400 tracking-wider">Email Address *</label>
+                    <input type="email" name="email" required placeholder="e.g., developer@domain.com" class="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-white transition-colors" />
+                  </div>
+                </div>
+
+                <!-- Project Category -->
+                <div class="space-y-2">
+                  <span class="block font-mono text-[10px] uppercase text-neutral-400 tracking-wider">Project Focus</span>
+                  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <label class="bg-neutral-950 border border-neutral-800 hover:border-white rounded-lg p-3 text-center cursor-pointer select-none transition-colors">
+                      <input type="radio" name="focus" value="brand" checked class="sr-only" />
+                      <span class="font-mono text-[10px] uppercase block">Brand</span>
+                    </label>
+                    <label class="bg-neutral-950 border border-neutral-800 hover:border-white rounded-lg p-3 text-center cursor-pointer select-none transition-colors">
+                      <input type="radio" name="focus" value="ux" class="sr-only" />
+                      <span class="font-mono text-[10px] uppercase block">UI/UX</span>
+                    </label>
+                    <label class="bg-neutral-950 border border-neutral-800 hover:border-white rounded-lg p-3 text-center cursor-pointer select-none transition-colors">
+                      <input type="radio" name="focus" value="webflow" class="sr-only" />
+                      <span class="font-mono text-[10px] uppercase block">Webflow</span>
+                    </label>
+                    <label class="bg-neutral-950 border border-neutral-800 hover:border-white rounded-lg p-3 text-center cursor-pointer select-none transition-colors">
+                      <input type="radio" name="focus" value="other" class="sr-only" />
+                      <span class="font-mono text-[10px] uppercase block">Bespoke</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div class="space-y-2">
+                  <label class="font-mono text-[10px] uppercase text-neutral-400 tracking-wider">Tell me about your vision</label>
+                  <textarea rows="4" placeholder="Describe scope, details, or custom design constraints..." class="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-white transition-colors resize-none"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-white hover:bg-neutral-200 text-neutral-950 font-mono text-xs uppercase tracking-widest font-bold py-4 rounded-lg transition-all cursor-pointer">
+                  INITIATE CONNECTION
+                </button>
+
+              </form>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+
+      <!-- 8. Footer -->
+      <footer class="w-full bg-neutral-950 border-t border-neutral-900 py-12 text-center text-neutral-500">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <p class="font-mono text-[10px] uppercase tracking-wider">
+            &copy; 2026 ELIO PORTFOLIO. STABLE DESIGN ARCHITECTURE.
+          </p>
+          <div class="flex space-x-6 text-[10px] font-mono uppercase tracking-wider">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Github</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Linkedin</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">X.com</a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- 9. Interactive Blog Post Reader Overlay Modal -->
+    <div id="blog-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md hidden opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true">
+      <div class="modal-box w-full max-w-2xl bg-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-neutral-100 transform scale-95 translate-y-4 transition-all duration-300 space-y-6 overflow-y-auto max-h-[90vh]">
+        <!-- Exit & Header -->
+        <div class="flex items-center justify-between border-b border-neutral-100 pb-4">
+          <span id="modal-date" class="font-mono text-[10px] uppercase tracking-widest text-neutral-400">MAY 15, 2026</span>
+          <button id="close-modal" class="text-neutral-500 hover:text-neutral-950 transition-colors p-2 text-sm uppercase font-mono tracking-widest cursor-pointer">
+            Close ✕
+          </button>
+        </div>
+        <!-- Title -->
+        <h3 id="modal-title" class="font-display font-medium text-3xl sm:text-4xl text-neutral-900 tracking-tight leading-none">The Anti-Trends of Web Design</h3>
+        <!-- Text Content -->
+        <div id="modal-text" class="space-y-4">
+          <!-- Dynamic Text Content Goes Here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Success Form Submission Toast Notification -->
+    <div id="toast-success" class="fixed bottom-6 right-6 z-50 bg-neutral-950 border border-neutral-800 text-white rounded-2xl p-4 shadow-2xl flex items-center space-x-3 max-w-md hidden translate-y-12 opacity-0 transition-all duration-300">
+      <div class="p-2 bg-white rounded-lg text-neutral-900">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <div>
+        <p class="font-display font-semibold text-xs py-0.5 uppercase tracking-wide">Transmission successful</p>
+        <p id="toast-message" class="text-[10px] font-mono text-neutral-400">Connection requested is sent!</p>
+      </div>
+    </div>
+
+    <!-- 11. Module Import -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

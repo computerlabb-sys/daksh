@@ -1,0 +1,6 @@
+{
+  "name": "Elio Portfolio",
+  "description": "A stunning, minimalist developer and designer portfolio inspired by high-end typography and black-and-white art.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
